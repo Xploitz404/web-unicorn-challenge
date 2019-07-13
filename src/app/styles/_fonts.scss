@@ -45,9 +45,9 @@
 }
 
 
-// Títulos 
+// Títulos
 
-.Title {
+.title {
     &-1 {
       color: $blue-100;
       font-family: 'Dosis', sans-serif;
@@ -57,3 +57,11 @@
   }
   
 
+// Links
+
+.link {
+  color: $blue-100;
+  font-family: 'Dosis', sans-serif;
+  font-size: 16pt;
+  font-weight: 500;
+}
