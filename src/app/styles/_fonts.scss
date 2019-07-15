@@ -51,8 +51,14 @@
     &-1 {
       color: $blue-100;
       font-family: 'Dosis', sans-serif;
-      font-size: 32pt;
-      font-weight: 600;
+      font-size: 42pt;
+      font-weight: 700;
+    }
+    &-2 {
+      color: $blue-100;
+      font-family: 'Dosis', sans-serif;
+      font-size: 16pt;
+      font-weight: 700;
     }
   }
   
@@ -63,5 +69,14 @@
   color: $blue-100;
   font-family: 'Dosis', sans-serif;
   font-size: 16pt;
+  font-weight: 500;
+}
+
+// Párrafos
+
+.paragraph {
+  color: #838383;
+  font-family: 'Dosis', sans-serif;
+  font-size: 14pt;
   font-weight: 500;
 }
