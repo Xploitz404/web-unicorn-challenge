@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { projectCards } from '../../../constants/project-cards/project-cards.const';
 
 @Component({
   selector: 'unicorn-landing-projects',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-projects.component.sass']
 })
 export class LandingProjectsComponent implements OnInit {
+
+  projects = projectCards;
 
   constructor() { }
 
