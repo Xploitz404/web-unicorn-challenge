@@ -6,19 +6,9 @@
   </section>
   <section class="header__options">
     <ul class="header__options-list">
-      <li class="header__options-item">
-        <a href="" class="header__options-link link">
-          Inicio
-        </a>
-      </li>
-      <li class="header__options-item">
-        <a href="" class="header__options-link link">
-          Sobre mí
-        </a>
-      </li>
-      <li class="header__options-item">
-        <a href="" class="header__options-link link">
-          Portafolio
+      <li class="header__options-item" *ngFor="let link of links">
+        <a class="header__options-link link" (click)="scrollTo(link.section)">
+          {{ link.name }}
         </a>
       </li>
     </ul>
