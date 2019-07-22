@@ -1,6 +1,7 @@
-<nav class="header__wrapper">
+<nav class="header__wrapper" [ngClass]="{'header__fixed': scrolled}">
   <section class="header__blank">
-    <h2 class="header__blank-title" *ngIf="scrolled">
+    <h2 class="header__title title-2" *ngIf="scrolled"
+    [ngClass]="scrolled ? 'header__title-fadeIn' : 'header__title-fadeOut' ">
       Unicornio web profesional
     </h2>
   </section>

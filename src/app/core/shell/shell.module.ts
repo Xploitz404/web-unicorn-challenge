@@ -13,7 +13,7 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
   ],
   imports: [
     CommonModule,
-    NgxPageScrollCoreModule.forRoot({duration: 500})
+    NgxPageScrollCoreModule.forRoot({duration: 500, scrollOffset: 60})
   ],
   exports: [
     HeaderComponent,

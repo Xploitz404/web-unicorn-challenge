@@ -1,14 +1,18 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { PageScrollService } from 'ngx-page-scroll-core';
 import { headerLinks } from '../../../constants/header-links/header-links.const';
+import { DimentionService } from '../../../services/dimention/dimention.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'unicorn-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.sass']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
+
+  scrollSubscription: Subscription;
 
   scrolled = false;
   /**
@@ -21,10 +25,18 @@ export class HeaderComponent implements OnInit {
    */
   constructor(
     private pageScrollService: PageScrollService,
-    @Inject(DOCUMENT) private document) {
+    @Inject(DOCUMENT) private document,
+    private dimentionService: DimentionService) {
   }
 
   ngOnInit() {
+    this.scrollSubscription = this.dimentionService.scrollYCoord.subscribe( position => {
+      if (position > 285) {
+        this.scrolled = true;
+      } else {
+        this.scrolled = false;
+      }
+    });
   }
 
   /**
@@ -35,6 +47,10 @@ export class HeaderComponent implements OnInit {
       document: this.document,
       scrollTarget: section
     });
+  }
+
+  ngOnDestroy(){
+    this.scrollSubscription.unsubscribe();
   }
 
 }

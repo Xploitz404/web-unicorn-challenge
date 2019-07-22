@@ -5,7 +5,7 @@
 export const headerLinks = [
   {
     name: 'Inicio',
-    section: '.start__cards-wrapper'
+    section: '.start__title'
   },
   {
     name: 'Sobre mí',
