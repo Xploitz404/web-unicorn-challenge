@@ -1,7 +1,8 @@
 @import '../../../styles/_colors.scss'
 
 .start
-  background: $white-300 
+  background: $white-300
+  width: 100%
 
   &__title
     background: $white-200 
@@ -48,8 +49,79 @@
     bottom: -10%
 
 
+
+
+// Media queries 
+
+@media (max-width: 575.98px)
+  .start
+    &__title
+      display: grid
+      .title-1
+        width: 100%
+        text-align: center
+    &__card
+      width: 90%
+    &__photograph
+      display: block
+      height: auto
+      position: static
+    &__rocket
+      display: none
+  
+    .card-1 
+      margin: 1rem auto
+    .card-2
+      margin: 1rem auto
+
+@media (min-width: 320px)
+  .start
+    &__title
+      grid-template: 100% / 65% 35%
+      margin: 3rem auto 1rem auto
+      .title-1
+        margin: 0 0 0 1rem
+        padding: 1rem 0
+    &__photograph
+      margin: 1rem auto
+      width: 70%
+    
+
+@media (min-width: 375px) 
+  .start
+    &__title
+      grid-template: 100% / 60% 40%
+      margin-top: 4rem
+      .title-1
+        margin: 0
+        padding: 1rem 0 1rem 1.5rem
+    &__photograph
+      width: 60%
+      margin: 0.5rem auto
+  
+@media (min-width: 425px)
+  .start
+    &__title
+      grid-template: 100% / 55% 45%
+      margin: 4.5rem 0 2rem 0
+      padding-bottom: 1rem
+      .title-1
+        padding: 1.5rem 0 1.5rem 1rem
+        font-size: 26pt
+
+@media (min-width: 475px) and (max-width: 575.98px)
+  .start
+    &__title  
+      margin: 5rem 0 2rem 0
+      .title-1
+        padding-left: 1.5rem
+    &__photograph
+      margin: 0 auto
+    &__card
+      width: 75%
+
+@media (min-width: 992px)
   .card-1
     margin: 5% auto 2rem 18%
   .card-2
     margin: 2% auto 2rem 28%
-  

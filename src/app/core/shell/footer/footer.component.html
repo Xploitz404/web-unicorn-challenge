@@ -2,4 +2,9 @@
   <h4 class="title-3">
     Desarrollado con ♥ por <a href="https://www.instagram.com/xploitz404/" class="footer__link" target="_blank">Oscar Lara.</a>
   </h4>
+  <section class="footer__social">
+    <a [href]="link.url" class="footer__social-item" *ngFor="let link of links">
+      <img [src]="link.img" alt="">
+    </a>
+  </section>
 </footer>

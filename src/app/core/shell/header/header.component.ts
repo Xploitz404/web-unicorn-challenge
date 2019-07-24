@@ -3,7 +3,7 @@ import { DOCUMENT } from '@angular/common';
 import { PageScrollService } from 'ngx-page-scroll-core';
 import { headerLinks } from '../../../constants/header-links/header-links.const';
 import { DimentionService } from '../../../services/dimention/dimention.service';
-import { Subscription } from 'rxjs';
+import { Subscription, combineLatest } from 'rxjs';
 
 @Component({
   selector: 'unicorn-header',
@@ -12,12 +12,15 @@ import { Subscription } from 'rxjs';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 
+  /** Variable de estado que almacena si se ha hecho scroll */
+  scrolled: boolean;
+  /** Variable de suscripción al evento scroll */
   scrollSubscription: Subscription;
-
-  scrolled = false;
-  /**
-   * Instancia de la constante headerLinks
-   */
+  /** Variable booleana que almacena si la resolución es Mobile o no */
+  isMobile: boolean;
+  /** Variable de suscripción al width */
+  widthSubscription: Subscription;
+  /** Instancia de la constante headerLinks */
   links = headerLinks;
 
   /**
@@ -30,8 +33,15 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.scrollSubscription = this.dimentionService.scrollYCoord.subscribe( position => {
-      if (position > 285) {
+    this.widthSubscription = this.dimentionService.widthSize.subscribe( currentWidth => {
+      if (currentWidth <= 576) {
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
+    });
+    this.scrollSubscription = this.dimentionService.scrollYCoord.subscribe( currentScroll => {
+      if (currentScroll >= 100) {
         this.scrolled = true;
       } else {
         this.scrolled = false;
@@ -49,7 +59,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
     });
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
+    this.widthSubscription.unsubscribe();
     this.scrollSubscription.unsubscribe();
   }
 

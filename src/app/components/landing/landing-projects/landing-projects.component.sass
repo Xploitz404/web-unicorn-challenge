@@ -9,8 +9,6 @@
     grid-template: 100% / repeat(2, 1fr)
     grid-gap: 2rem
 
-
-
 .project
     cursor: pointer
     position: relative
@@ -46,3 +44,24 @@
       background-color: rgba(0,0,0,.7)
       display: flex
       border-radius: 10px
+
+// Media Queries
+
+@media (max-width: 575.98px)
+  .projects
+    &__cards
+      width: 90%
+      margin: 1rem auto
+      grid-template: repeat(2, 1fr) / 100%
+
+  .project
+    &-image,&-overlay
+      max-width: 100%
+      width: 100%
+
+@media (min-width: 475px) and (max-width: 575.98px)
+  .projects
+    &__cards
+      margin: 2rem auto
+      width: 75%
+

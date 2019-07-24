@@ -13,7 +13,25 @@
     &:hover
       text-decoration: none
       color: #cccccc
+  &__social
+    width: 100%
+    display: none
+    grid-template: 100% / repeat(4, 1fr)
+    padding: 0.5rem
+    &-item 
+      display: flex
+      justify-content: center
 
 .title-3
   color: $white-100
   text-align: center
+  width: 100%
+
+// Media Queries
+
+@media (max-width: 575.98px)
+
+  .footer
+    display: block
+    &__social
+      display: grid
