@@ -1,0 +1,56 @@
+@import '../../../styles/_colors.scss'
+
+.about
+  margin: 12rem 0 4rem 0
+  padding: 0 7rem
+  width: 100%
+  &__title 
+    margin-bottom: 1.5rem
+  &__text
+    background-color: $white-100
+    border-radius: 10px
+    box-shadow: 0 4px 5px  #cccccc
+    margin: 0
+    padding: 1rem 1.5rem
+    text-align: justify
+    width: 50%
+
+// Media Queries
+
+@media  (max-width: 575.98px)
+  .about
+    margin: 2rem 0
+    padding: 0
+    &__title 
+    width: 100%
+    text-align: center
+
+    &__text
+      width: 90%
+      margin: 0 auto
+
+@media (min-width: 475px)
+  .about
+    &__text
+      width: 75%
+
+@media (min-width: 576px) and (max-width: 991.98px)
+  .about
+    padding: 0 1rem
+    margin: 3rem 0
+    &__text
+      margin: 0 auto
+    &__title
+      text-align: center
+
+@media (min-width: 992px)
+  .about
+    margin: 7rem 0 3rem 0
+    &__text
+      width: 60%
+
+@media (min-width: 1024px)
+  .about
+    margin: 12rem 0 4rem 0
+    &__text
+      width: 50%

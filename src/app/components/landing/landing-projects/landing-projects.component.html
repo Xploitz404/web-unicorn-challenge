@@ -1,0 +1,17 @@
+<section class="projects">
+  <h4 class="title-2 text-center">
+    Proyectos
+  </h4>
+  <section class="projects__cards">
+    <a [href]="project.link" [ngClass]="'project'" *ngFor="let project of projects" target="_blank">
+      <figure class="project-image">
+        <img [src]="project.img" alt="">
+      </figure>
+      <div class="project-overlay">
+        <p class="project-name">
+          {{project.name}}
+        </p>
+      </div>
+    </a>
+  </section>
+</section>

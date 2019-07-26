@@ -1,0 +1,10 @@
+<footer class="footer">
+  <h4 class="title-3">
+    Desarrollado con <span class="social icon-heart"></span> por <a href="https://www.instagram.com/xploitz404/" class="footer__link" target="_blank">Oscar Lara.</a>
+  </h4>
+  <section class="footer__social">
+    <a [href]="link.url" class="footer__social-item" *ngFor="let link of links" target="_blank">
+      <span [ngClass]="link.icon"></span>
+    </a>
+  </section>
+</footer>

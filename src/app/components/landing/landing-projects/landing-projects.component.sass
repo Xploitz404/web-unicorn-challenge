@@ -1,0 +1,67 @@
+@import '../../../styles/_colors.scss'
+@import '../../../styles/_fonts.scss'
+
+.projects
+  &__cards
+    width: 60%
+    margin: 2rem auto
+    display: grid
+    grid-template: 100% / repeat(2, 1fr)
+    grid-gap: 2rem
+
+.project
+    cursor: pointer
+    position: relative
+    &-image
+      border-radius: 10px
+      box-shadow: 0 4px 9px -3px #000000
+      margin: 0
+      max-width: 320px
+    &-image img 
+      width: 100%
+      border-radius: 10px
+    &-overlay
+      background-color: rgba(0,0,0,0)
+      position: absolute
+      left:0
+      right: 0
+      bottom: 0
+      top: 0
+      display: none
+      align-items: center
+      justify-content: center
+      color: white
+      text-align: center
+      transition: display 3s ease-in-out
+      -webkit-transition: display 3s ease-in-out
+      max-width: 320px
+    &-name
+      color: $white-100
+      font-weight: bold
+      font-size: 22pt
+      font-family: 'Dosis', sans-serif
+    &:hover &-overlay
+      background-color: rgba(0,0,0,.7)
+      display: flex
+      border-radius: 10px
+
+// Media Queries
+
+@media (max-width: 575.98px)
+  .projects
+    &__cards
+      width: 90%
+      margin: 1rem auto
+      grid-template: repeat(2, 1fr) / 100%
+
+  .project
+    &-image,&-overlay
+      max-width: 100%
+      width: 100%
+
+@media (min-width: 475px) and (max-width: 991.98px)
+  .projects
+    &__cards
+      margin: 2rem auto
+      width: 75%
+

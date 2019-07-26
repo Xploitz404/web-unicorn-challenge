@@ -1,0 +1,90 @@
+@import './../../../styles/_colors.scss'
+
+.header 
+  &__wrapper
+    background-color: $white-200
+    display: grid
+    grid-template: 100% / 60% 40%
+    width: 100%
+
+  &__options
+    &-item
+      display: inline-block
+      margin: 0 1rem
+    &-list
+      display: flex
+      justify-content: center 
+      padding: 1rem 0
+      margin-bottom: 0
+    &-link 
+      user-select: none
+  &__fixed
+    background-color: $white-200
+    position: fixed
+    top: 0
+    z-index: 998
+  &__title
+    text-align: center
+    margin-bottom: 0
+    padding: 0.5rem 0
+    &-fadeIn
+      animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both
+    &-fadeOut
+      animation: fadeOut 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both
+  &__logo 
+    width: 100%
+    max-width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 0
+    padding: 1rem 0
+    &-icon
+      width: 50%
+  &__scrolled
+    background-color: $white-300
+    box-shadow: 0 1px 3px #cccccc
+
+// Keyframes
+
+  @keyframes fadeIn 
+    0%
+      transform: translateY(-50px)
+      opacity: 0
+    100%
+      transform: translateY(0)
+      opacity: 1
+  
+  @keyframes fadeOut
+    0%
+      transform: translateY(0)
+      opacity: 1
+    100%
+      transform: translateY(-50px)
+      opacity: 0
+
+// Media Queries
+
+@media (min-width: 320px) 
+  .header
+    &__wrapper
+      grid-template: 100% / 20% 80%
+    &__options
+      &-item
+        margin: 0 0.5rem
+
+@media (min-width: 576px)
+  .header
+    &__options
+      &-list
+        justify-content: space-evenly
+
+@media (min-width: 992px)
+  .header
+    &__wrapper
+      grid-template: 100% / 60% 40%
+    &__options
+      &-list
+        justify-content: center
+      &-item
+        margin: 0 1rem

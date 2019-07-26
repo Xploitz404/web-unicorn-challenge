@@ -1,0 +1,48 @@
+@import '../../../styles/_colors.scss'
+
+.footer
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 1rem 2rem
+  background-color: $red-100
+  &__link
+    color: $white-100
+    border-bottom: 1px dotted $white-100
+    &:hover
+      text-decoration: none
+      color: #cccccc
+  &__social
+    width: 100%
+    display: none
+    grid-template: 100% / repeat(4, 1fr)
+    padding: 0.5rem
+    &-item 
+      display: flex
+      justify-content: center
+      span
+        color: $white-100
+        cursor: pointer
+        font-size: 20px
+        &:hover
+          color: #ccc
+
+
+.title-3
+  color: $white-100
+  text-align: center
+  width: 100%
+
+.icon-heart
+  color: $white-100
+  font-size: 12pt
+
+// Media Queries
+
+@media (max-width: 575.98px)
+
+  .footer
+    display: block
+    &__social
+      display: grid

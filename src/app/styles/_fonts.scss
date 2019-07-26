@@ -45,15 +45,64 @@
 }
 
 
-// Títulos 
+// Títulos
 
-.Title {
+.title {
     &-1 {
       color: $blue-100;
       font-family: 'Dosis', sans-serif;
+      font-size: 42pt;
+      font-weight: 700;
+    }
+    &-2 {
+      color: $blue-100;
+      font-family: 'Dosis', sans-serif;
       font-size: 32pt;
-      font-weight: 600;
+      font-weight: 700;
+    }
+    &-3 {
+      color: $blue-100;
+      font-family: 'Dosis', sans-serif;
+      font-size: 16pt;
+      font-weight: 700;
     }
   }
   
+
+// Links
+
+.link {
+  color: $blue-100;
+  font-family: 'Dosis', sans-serif;
+  font-size: 16pt;
+  font-weight: 500;
+}
+
+// Párrafos
+
+.paragraph {
+  color: #6c6c6c;
+  font-family: 'Dosis', sans-serif;
+  font-size: 14pt;
+  font-weight: 500;
+}
+
+// Media Queries
+
+@media (max-width: 474.98px) {
+  .title {
+    &-1 {
+      font-size: 24pt;
+    }
+    &-2 {
+      font-size: 18pt
+    }
+    &-3 {
+      font-size: 14pt;
+    }
+  }
+  .link {
+    font-size: 14pt;
+  }
+}
 

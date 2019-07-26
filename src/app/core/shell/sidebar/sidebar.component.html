@@ -1,0 +1,10 @@
+<aside class="sidebar__wrapper" *ngIf="!isMobile">
+  <figure class="sidebar__logo">
+    <img src="/assets/icons/unicorn.png" alt="" class="sidebar__logo-icon">
+  </figure>
+  <section class="sidebar__social">
+    <a [href]="link.url" class="sidebar__social-item" *ngFor="let link of links" target="_blank">
+      <span [ngClass]="link.icon"></span>
+    </a>
+  </section>
+</aside>

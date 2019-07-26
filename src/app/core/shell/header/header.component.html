@@ -1,0 +1,16 @@
+<nav class="header__wrapper" [ngClass]="{'header__fixed': isMobile, 'header__scrolled': scrolled}">
+  <section class="header__blank">
+    <figure class="header__logo" *ngIf="isMobile">
+      <img src="/assets/icons/unicorn.png" alt="" class="header__logo-icon">
+    </figure>
+  </section>
+  <section class="header__options">
+    <ul class="header__options-list">
+      <li class="header__options-item" *ngFor="let link of links">
+        <a class="header__options-link link" (click)="scrollTo(link.section, 80)">
+          {{ link.name }}
+        </a>
+      </li>
+    </ul>
+  </section>
+</nav>
