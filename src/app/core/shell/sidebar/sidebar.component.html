@@ -3,17 +3,8 @@
     <img src="/assets/icons/unicorn.png" alt="" class="sidebar__logo-icon">
   </figure>
   <section class="sidebar__social">
-    <a href="#" class="sidebar__social-item">
-      <img src="/assets/icons/instagram.png" alt="">
-    </a>
-    <a href="#" class="sidebar__social-item">
-      <img src="/assets/icons/twitter.png" alt="">
-    </a>
-    <a href="#" class="sidebar__social-item">
-      <img src="/assets/icons/youtube.png" alt="">
-    </a>
-    <a href="#" class="sidebar__social-item">
-      <img src="/assets/icons/whatsapp.png" alt="">
+    <a [href]="link.url" class="sidebar__social-item" *ngFor="let link of links" target="_blank">
+      <span [ngClass]="link.icon"></span>
     </a>
   </section>
 </aside>

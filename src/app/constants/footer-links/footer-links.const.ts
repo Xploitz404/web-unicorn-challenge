@@ -1,19 +1,19 @@
 
 export const footerLinks = [
   {
-    img: '/assets/icons/instagram.png',
+    icon: 'social icon-instagram_stroked',
+    url: 'https://instagram.com/xploitz404/'
+  },
+  {
+    icon: 'social icon-twitter_filled',
+    url: 'https://twitter.com/Xploitz_404/'
+  },
+  {
+    icon: 'social icon-youtube',
     url: ''
   },
   {
-    img: '/assets/icons/twitter.png',
-    url: ''
-  },
-  {
-    img: '/assets/icons/youtube.png',
-    url: ''
-  },
-  {
-    img: '/assets/icons/whatsapp.png',
+    icon: 'social icon-whatsapp_filled',
     url: ''
   },
 ];

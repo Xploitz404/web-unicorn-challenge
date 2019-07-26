@@ -3,12 +3,16 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DimentionService } from '../../../services/dimention/dimention.service';
 import { Subscription } from 'rxjs';
 
+import { footerLinks } from '../../../constants/footer-links/footer-links.const';
+
 @Component({
   selector: 'unicorn-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.sass']
 })
 export class SidebarComponent implements OnInit, OnDestroy {
+
+  links = footerLinks;
 
   /** Variable booleana que almacena si la resolución es Mobile o no */
   isMobile: boolean;
