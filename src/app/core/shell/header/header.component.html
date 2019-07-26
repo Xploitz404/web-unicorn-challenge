@@ -7,7 +7,7 @@
   <section class="header__options">
     <ul class="header__options-list">
       <li class="header__options-item" *ngFor="let link of links">
-        <a class="header__options-link link" (click)="scrollTo(link.section)">
+        <a class="header__options-link link" (click)="scrollTo(link.section, 80)">
           {{ link.name }}
         </a>
       </li>

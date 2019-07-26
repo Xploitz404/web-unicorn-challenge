@@ -34,7 +34,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.widthSubscription = this.dimentionService.widthSize.subscribe( currentWidth => {
-      if (currentWidth <= 576) {
+      if (currentWidth < 576) {
         this.isMobile = true;
       } else {
         this.isMobile = false;
@@ -52,10 +52,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
   /**
    * Método que lleva a la sección que se le indique como parámetro
    */
-  scrollTo(section: string) {
+  scrollTo(section: string, offsetValue: number) {
     this.pageScrollService.scroll({
       document: this.document,
-      scrollTarget: section
+      scrollTarget: section,
+      scrollOffset: offsetValue
     });
   }
 

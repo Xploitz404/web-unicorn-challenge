@@ -29,7 +29,28 @@
       width: 90%
       margin: 0 auto
 
-@media (min-width: 475px) and (max-width: 575.98px)
+@media (min-width: 475px)
   .about
     &__text
       width: 75%
+
+@media (min-width: 576px) and (max-width: 991.98px)
+  .about
+    padding: 0 1rem
+    margin: 3rem 0
+    &__text
+      margin: 0 auto
+    &__title
+      text-align: center
+
+@media (min-width: 992px)
+  .about
+    margin: 7rem 0 3rem 0
+    &__text
+      width: 60%
+
+@media (min-width: 1024px)
+  .about
+    margin: 12rem 0 4rem 0
+    &__text
+      width: 50%

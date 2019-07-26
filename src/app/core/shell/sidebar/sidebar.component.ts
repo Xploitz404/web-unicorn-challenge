@@ -20,7 +20,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
   /** Código que se ejecuta al iniciarse el componente */
   ngOnInit() {
     this.widthSubscription = this.dimentionService.widthSize.subscribe( currentWidth => {
-      if (currentWidth <= 576) {
+      if (currentWidth < 576) {
         this.isMobile = true;
       } else {
         this.isMobile = false;
