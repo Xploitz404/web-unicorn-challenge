@@ -31,7 +31,6 @@ export class LandingProjectsComponent implements OnInit, OnDestroy {
           this.isInProjectsSection = true;
         } else if ((currentDimentions[0] >= 1024) && (currentDimentions[1] >= 525)) {
           this.isInProjectsSection = true;
-          console.log(currentDimentions);
         }
       });
   }
