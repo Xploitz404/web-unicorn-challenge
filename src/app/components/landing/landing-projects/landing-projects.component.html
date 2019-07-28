@@ -1,8 +1,10 @@
 <section class="projects">
-  <h4 class="title-2 text-center">
+  <h4 class="title-2 text-center"
+  [ngClass]="{'animated fadeInUp': isInProjectsSection}">
     Proyectos
   </h4>
-  <section class="projects__cards">
+  <section class="projects__cards"
+  [ngClass]="{'animated jackInTheBox': isInProjectsSection}">
     <a [href]="project.link" [ngClass]="'project'" *ngFor="let project of projects" target="_blank">
       <figure class="project-image">
         <img [src]="project.img" alt="">

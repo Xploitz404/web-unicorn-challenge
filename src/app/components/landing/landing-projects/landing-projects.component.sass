@@ -8,6 +8,7 @@
     display: grid
     grid-template: 100% / repeat(2, 1fr)
     grid-gap: 2rem
+    opacity: 0
 
 .project
     cursor: pointer
@@ -45,6 +46,9 @@
       display: flex
       border-radius: 10px
 
+.title-2 
+  opacity: 0
+
 // Media Queries
 
 @media (max-width: 575.98px)
@@ -59,9 +63,21 @@
       max-width: 100%
       width: 100%
 
+  .fadeInUp
+    animation-delay: 0.75s
+  
+  .jackInTheBox
+    animation-delay: 1.25s
+
 @media (min-width: 475px) and (max-width: 991.98px)
   .projects
     &__cards
       margin: 2rem auto
       width: 75%
 
+@media (min-width: 576px) 
+  .fadeInUp
+    animation-delay: 0.5s
+  
+  .jackInTheBox
+    animation-delay: 1.2s
